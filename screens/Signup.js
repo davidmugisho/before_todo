@@ -1,5 +1,5 @@
 import react, { useState } from "react";
-import { View, Text, TextInput, Button, TouchableOpacity } from "react-native";
+import { View, Text, TextInput, Button, TouchableOpacity,ImageBackground  } from "react-native";
 import axios from 'axios';
 
 const Signup = ({navigation}) => {
@@ -37,22 +37,37 @@ const Signup = ({navigation}) => {
             });
     }
 
-    return <View style={{
-        backgroundColor: '#eee',
-        flex: 1,
+    return (
+        <ImageBackground
+        source={{uri:'https://i.pinimg.com/564x/e0/f4/c3/e0f4c333452fba5ba5bd9a6d7c6ea455.jpg'}}
+        style={{flex: 1, resizeMode: 'cover', justifyContent: 'center', alignItems: 'center'}}
+        >
+    
+    <View style={{
+        flex:1,
+        // backgroundColor: '#eee',
+        // flex: 1,
         padding: 20,
-        // justifyContent: 'center',
+        justifyContent: 'space-around',
         alignItems: 'center'
     }} >
 
 
-        <Text style={{}}>
+        <Text style={{color:'#00ffff', fontWeight:'bold', fontSize:20}}>
             welcome onboard!
         </Text>
-        <Text> Lets help you in completing your tasks</Text>
+        <Text style={{color:'#00ffff', fontWeight:'bold', fontSize:'40', textAlign:'center', top:40}}> Lets help you in completing your tasks🐕</Text>
 
-        <View style={{ width: '100%' }}>
-            <Text>Full Name</Text>
+<View style={{
+    backgroundColor:'#3D2B1F',
+    top:30,
+    width:250,
+    borderRadius:10,
+    alignItems:'center',
+    padding: 10
+}}>
+        <View style={{ width:'100%' }}>
+            <Text style={{color:'#808080', fontSize:'17', top:'auto'}}>Full Name</Text>
             <TextInput
                 style={{
                     padding: 10,
@@ -66,7 +81,7 @@ const Signup = ({navigation}) => {
                 placeholder="Mary Eliot"
             />
 
-            <Text>Email</Text>
+            <Text style={{color:'#808080', fontSize:'17', top:'auto'}}>Email</Text>
 
             <TextInput
                 style={{
@@ -82,7 +97,7 @@ const Signup = ({navigation}) => {
             />
 
 
-            <Text>Password</Text>
+            <Text style={{color:'#808080', fontSize:'17', top:'auto'}}>Password</Text>
 
             <TextInput
                 style={{
@@ -97,10 +112,11 @@ const Signup = ({navigation}) => {
                 placeholder="*********"
                 secureTextEntry
             />
+            </View>
 
             {/* TODO : confirmPassword */}
             <Text style={{ color: 'red' }}>{error}</Text>
-            <Button style={{ marginTop: 10 }} title="Get Started" onPress={() => {
+            <Button style={{ marginTop: 10 }} title="Sign up" onPress={() => {
                 console.log('ok');
                 signupHandler();
             }} ></Button>
@@ -110,7 +126,10 @@ const Signup = ({navigation}) => {
                 navigation.navigate('Login')
             }}
             >
-                <Text>Do you want to sign in? </Text>
+                <Text style={{textAlign:'center'}}>Do you want to <Text 
+                style={{
+                    color:'red', fontStyle:'noemal', fontSize:20 , fontWeight:'bold'
+                }}>sign in? </Text></Text>
 
             </TouchableOpacity>
 
@@ -119,6 +138,8 @@ const Signup = ({navigation}) => {
 
 
     </View>
+    </ImageBackground>
+);
 }
 
 export default Signup;

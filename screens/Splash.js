@@ -24,6 +24,14 @@ const styles = StyleSheet.create({
       width: 335,
       height:60,
       top:-10,
+
+  },
+  buttonText: {
+    color: "#000000", // Set the text color to black
+    fontSize: 20,
+    alignSelf: 'center',
+    fontWeight: 700,
+    lineHeight: 30,
   },
   separator:{
     color: "#FF5733", // Adjust the color for the separator
@@ -96,20 +104,13 @@ const Splash = ({ navigation })=> {
         </View>
         
  
-        <Button
+        <TouchableOpacity
     style={styles.button}
     onPress={() => {console.log("button clicked"); 
     navigation.navigate('Login');
-    }}
-    titlestyle={{ 
-      color: "#000000", 
-      fontSize: 20, 
-      alignSelf:'center', 
-      lineHeight:30, 
-      fontWeight:700,
-      }}
-        title="Get Started"
-        ></Button>
+    }}>
+      <Text style={styles.buttonText}>Get Started</Text>
+    </TouchableOpacity>
       </View>
       </ImageBackground>
 

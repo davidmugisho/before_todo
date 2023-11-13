@@ -1,7 +1,6 @@
 import react, { useState } from "react";
-import { View, Text, TextInput, Button, Image, TouchableOpacity } from "react-native";
+import { View, Text, TextInput, Button, Image, TouchableOpacity, ImageBackground } from "react-native";
 import axios from 'axios';
-
 const Login = ({ navigation }) => {
 
     // REACT HOOK
@@ -38,23 +37,31 @@ const Login = ({ navigation }) => {
             });
     }
 
-    return <View style={{
+    return (
+        <ImageBackground 
+        source={{uri: 'https://i.pinimg.com/564x/bf/db/b0/bfdbb0edb2907b9d60a69e3aa90cb6b4.jpg'}}
+        style={{flex: 1, resizeMode: 'cover', justifyContent: 'center', alignItems: 'center'}}>
+    <View style={{
         backgroundColor: '#eee',
         flex: 1,
         padding: 20,
-        // justifyContent: 'center',
-        alignItems: 'center'
+        justifyContent:'space-around',
+        alignItems: 'center',
+        borderRadius: 50,
+        width: '80%',
+        // height: 100,
+        marginTop:35,
     }} >
 
 
-        <Text style={{ fontWeight: 'bold' }}>
+        <Text style={{ fontWeight: 'bold',fontStyle:'normal', fontSize:30 }}>
             Welcome back!
         </Text>
-        <Image style={{ height: 200, width: 200, alignSelf: 'center' }}
-            source={require('../assets/welcome.png')} />
+        <Image style={{ height: 200, width: 200, alignSelf: 'center', borderRadius:100}}
+            source={{uri :'https://i.pinimg.com/564x/00/17/f1/0017f1bdfde39cac00743f49844b2a84.jpg'}}/>
 
 
-        <View style={{ width: '100%' }}>
+        <View style={{ width: '100%', top: -20}}>
 
             <Text>Email</Text>
 
@@ -99,7 +106,10 @@ const Login = ({ navigation }) => {
                 navigation.navigate('Signup')
             }}
             >
-                <Text>Do you want to sign up? </Text>
+                <Text 
+                style={{
+                    textAlign: 'center'
+                 }}>Do you want to <Text style={{color:'red', fontStyle:'noemal', fontSize:20 , fontWeight:'bold'}}>sign up? </Text></Text>
 
             </TouchableOpacity>
 
@@ -108,6 +118,8 @@ const Login = ({ navigation }) => {
 
 
     </View>
+    </ImageBackground>
+    );
 }
 
 export default Login;
