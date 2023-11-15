@@ -4,8 +4,7 @@ import { View, Image, Text, ScrollView, StyleSheet,TouchableOpacity } from "reac
 import{MaterialCommunityIcons} from'@expo/vector-icons';
 
 import axios from 'axios';
-// import Card from "./components/Card";
-
+import Card  from "./components/Card";
 const Main = ({ navigation, route }) => {
 
     console.log('token :::', route.params.user.full_name);
@@ -29,19 +28,19 @@ const Main = ({ navigation, route }) => {
         </View>
 
 <View style={{padding:20 }}> 
-         <View style={{ 
+         {/* <View style={{ 
             backgroundColor:'rgb(255, 0, 0)',margin:20
         }}>
             <Image style={{ marginTop: 100, borderRadius: 45, height: 90, width: 90, alignSelf: 'center' }}
                 source={require('../assets/profile.png')} />
          
-        </View> 
-{/* 
+        </View>  */}
+
         <Card
         title="david"
         Subtile="100$"
-        Image="./assets/profile.png"
-        /> */}
+        Image="https://i.pinimg.com/564x/46/3e/79/463e79db4731016c6cf8e3afadcf6a55.jpg"
+        />
 
         <View style={{ backgroundColor:'rgba(0, 0, 255, 0.5)',margin:20, padding:10}}>
             <Text style={{
