@@ -39,6 +39,7 @@ const Signup = ({navigation}) => {
 
     return (
         <ImageBackground
+        blurRadius={5}
         source={{uri:'https://i.pinimg.com/564x/e0/f4/c3/e0f4c333452fba5ba5bd9a6d7c6ea455.jpg'}}
         style={{flex: 1, resizeMode: 'cover', justifyContent: 'center', alignItems: 'center'}}
         >
@@ -56,7 +57,7 @@ const Signup = ({navigation}) => {
         <Text style={{color:'#00ffff', fontWeight:'bold', fontSize:20}}>
             welcome onboard!
         </Text>
-        <Text style={{color:'#00ffff', fontWeight:'bold', fontSize:'40', textAlign:'center', top:40}}> Lets help you in completing your tasks🐕</Text>
+        <Text style={{color:'#00ffff', fontWeight:'bold', fontSize:40, textAlign:'center', top:40}}> Lets help you in completing your tasks🐕</Text>
 
 <View style={{
     backgroundColor:'#3D2B1F',
@@ -67,7 +68,7 @@ const Signup = ({navigation}) => {
     padding: 10
 }}>
         <View style={{ width:'100%' }}>
-            <Text style={{color:'#808080', fontSize:'17', top:'auto'}}>Full Name</Text>
+            <Text style={{color:'#808080', fontSize:17, top:'auto'}}>Full Name</Text>
             <TextInput
                 style={{
                     padding: 10,
@@ -81,7 +82,7 @@ const Signup = ({navigation}) => {
                 placeholder="Mary Eliot"
             />
 
-            <Text style={{color:'#808080', fontSize:'17', top:'auto'}}>Email</Text>
+            <Text style={{color:'#808080', fontSize:17, top:'auto'}}>Email</Text>
 
             <TextInput
                 style={{
@@ -97,7 +98,7 @@ const Signup = ({navigation}) => {
             />
 
 
-            <Text style={{color:'#808080', fontSize:'17', top:'auto'}}>Password</Text>
+            <Text style={{color:'#808080', fontSize:17, top:'auto'}}>Password</Text>
 
             <TextInput
                 style={{
@@ -128,7 +129,7 @@ const Signup = ({navigation}) => {
             >
                 <Text style={{textAlign:'center'}}>Do you want to <Text 
                 style={{
-                    color:'red', fontStyle:'noemal', fontSize:20 , fontWeight:'bold'
+                    color:'red', fontStyle:"normal", fontSize:20 , fontWeight:'bold'
                 }}>sign in? </Text></Text>
 
             </TouchableOpacity>

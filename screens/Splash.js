@@ -20,17 +20,23 @@ const styles = StyleSheet.create({
       backgroundColor: "#62D2C3",
       padding: 10,
       borderRadius: 20,
-      marginTop: 10,
-      width: 335,
+      marginTop: 20,
+      width: 235,
       height:60,
       top:-10,
+      borderRadius:30, 
+        shadowOffset:{width:20, height:10},
+        shadowOpacity:1,
+        shadowColor:'grey',
+        shadowRadius:40,
+        
 
   },
   buttonText: {
     color: "#000000", // Set the text color to black
     fontSize: 20,
     alignSelf: 'center',
-    fontWeight: 700,
+    fontWeight: "700",
     lineHeight: 30,
   },
   separator:{
@@ -52,6 +58,7 @@ const Splash = ({ navigation })=> {
 
   return (
     <ImageBackground
+    blurRadius={5}
       source={{uri:"https://i.pinimg.com/564x/40/72/24/407224af48964230c0431424b4ba0516.jpg"}}
       style={styles.background}
     >
@@ -89,7 +96,8 @@ const Splash = ({ navigation })=> {
             fontSize:17,
             fontWeight:600,
             lineHeight:22.5,
-            alignItems:'center'
+            alignItems:'center',
+            textAlign:'center'
         }}> Welcome to Pawsome Adoption! Where furry dreams come true. Explore our world of wagging tails and endless love. Browse, meet, and adopt your new best friend. Unleash joy, adopt today! 🏡🐕 #PawsomeAdoption #AdoptDontShop
         </Text>
         <View style={styles.Image}>

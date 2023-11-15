@@ -2,7 +2,7 @@ import React from "react";
 import Splash from "./screens/Splash";
 import Signup from "./screens/Signup.js";
 import Login from "./screens/Login";
-// import Main from "./screens/Main";
+import Main from "./screens/Main";
 
 
 
@@ -41,9 +41,9 @@ const App = () => {
        <Stack.Screen name="Login" component={Login} options={{
         headerShown: false
       }} />
-       {/* <Stack.Screen name="Main" component={Main} options={{
+       <Stack.Screen name="Main" component={Main} options={{
         headerShown: false
-      }} /> */}
+      }} />
 
           </Stack.Navigator>
   </NavigationContainer>
