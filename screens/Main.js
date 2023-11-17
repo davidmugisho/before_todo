@@ -27,7 +27,7 @@ const Main = ({ navigation, route }) => {
                 Welcome {route.params.user.full_name}</Text>
         </View>
 
-<View style={{padding:20 }}> 
+<View style={{padding:10 }}> 
          {/* <View style={{ 
             backgroundColor:'rgb(255, 0, 0)',margin:20
         }}>
@@ -37,23 +37,23 @@ const Main = ({ navigation, route }) => {
         </View>  */}
 
         <Card
-        title="david"
-        Subtile="100$"
-        Image="https://i.pinimg.com/564x/46/3e/79/463e79db4731016c6cf8e3afadcf6a55.jpg"
+        title="david mugisho"
+        // Subtile="100$"
+        Image="https://i.pinimg.com/564x/76/0c/48/760c488bd61903f481dc0bd10bec193e.jpg"
         />
 
-        <View style={{ backgroundColor:'rgba(0, 0, 255, 0.5)',margin:20, padding:10}}>
+        <View style={{ backgroundColor:'rgba(0, 0, 255, 0.5)', padding:20}}>
             <Text style={{
-                fontWeight: '700', padding:20,}}>All Dogs for Sale</Text>
+                fontWeight: '700', padding:10,}}>All Dogs for Sale</Text>
             <View style={{
                 backgroundColor: '#fff',
-                padding: 20,
+                padding: 30,
                 elevation: 2,
-                borderRadius: 10
+                borderRadius: 15
 
             }}>
                 <Text style={{
-                fontWeight: 'bold', fontSize: 20, color:'tomato', textDecorationLine:'underline'}}>All categories</Text>
+                fontWeight: 'bold', fontSize: 25, color:'tomato', textDecorationLine:'underline'}}>All categories</Text>
                 <ScrollView>
                     {
 
@@ -67,8 +67,9 @@ const Main = ({ navigation, route }) => {
             </View>
         </View>
 
-<View style={{ margin:20,backgroundColor:'#00ff00'}}>
-        <TouchableOpacity style={styles.continueButton} onPress={() => console.log('clikked')}><Text style={{
+<View style={{ margin:10,backgroundColor:'#00ff00'}}>
+        <TouchableOpacity style={styles.continueButton} onPress={() => console.log('clikked')}>
+            <Text style={{
             textAlign:'center', color:'white' , fontSize:25,fontWeight:'bold'
         }}>BUY</Text>
         </TouchableOpacity>
